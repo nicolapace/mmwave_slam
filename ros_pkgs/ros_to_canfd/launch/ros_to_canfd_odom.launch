@@ -1,0 +1,14 @@
+<launch>
+  <node name="encoder_odometry"  pkg="ros_to_canfd"  type="ros_to_can_odom.py"  output="screen">
+    <param name="channel"         type="string"   value="can0"/>
+    <param name="bitrate"         type="int"      value="1000000"/>
+    <param name="data_bitrate"    type="int"      value="2000000"/>
+    <param name="msg_timeout"     type="int"      value="2"/>
+  </node>
+
+
+<!-- <node pkg="tf" type="static_transform_publisher" name="basefootprint_tf" args="0 0 0 0 0 0 /base_footprint /base_link 100" /> --> 
+
+<node pkg="tf" type="static_transform_publisher" name="baselink_tf" args="+0.28 0 0.12 0 0 0 /base_link /diff_robot_base_link 100" />
+
+</launch>

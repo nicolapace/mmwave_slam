@@ -1,0 +1,15 @@
+<launch>
+
+  <node name="pulsanti"       pkg="ros_to_canfd"  type="pulsanti.py"            output="screen">
+    <param name="channel"         type="string"   value="can0"/>
+    <param name="bitrate"         type="int"      value="1000000"/>
+    <param name="data_bitrate"    type="int"      value="2000000"/>
+    <param name="msg_timeout"     type="int"      value="2"/>
+  </node>
+  <node name="ros_to_can"       pkg="ros_to_canfd"  type="onlymove.py"            output="screen">
+    <param name="channel"         type="string"   value="can0"/>
+    <param name="bitrate"         type="int"      value="1000000"/>
+    <param name="data_bitrate"    type="int"      value="2000000"/>
+    <param name="msg_timeout"     type="int"      value="2"/>
+  </node>
+</launch>

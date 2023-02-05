@@ -1,0 +1,17 @@
+<launch>
+  <include file="$(find ti_mmwave_rospkg)/launch/launch_1843AOP.launch">
+        <arg name="device_number" value="3"/>
+        <arg name="device_name" value="BACK"/>
+        <arg name="device_model" value="MMWAVE1843AOP"/>
+	<arg name="robot_model" value="diff_robot"/>
+	<arg name="punti_desiderati" default="200"/>
+        <arg name="use_agglo" default="false"/>
+        <arg name="use_lior" default="false"/>
+        <arg name="take_sideinfo" default="false"/>
+        <arg name="dist_InlierTh" default="0.2"/>
+        <arg name="cdist" default="0.6"/>
+  </include>
+  <node pkg="tf" type="static_transform_publisher" name="radar_baselink_back" args="-0.40 0 0.40 3.14 0 0 /diff_robot_base_link /diff_robot_ti_mmwave_BACK 100">
+	<remap from="radar_baselink_back" to="diff_robot/radar_baselink_back"/> 
+  </node>
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<robot name="diff_robot">
+
+  <!-- The robot link description -->
+  <link name="/diff_robot_base_link" />
+
+</robot>
