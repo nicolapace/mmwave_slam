@@ -37,7 +37,7 @@ Then clone this repository and build [ira_laser_tools](https://github.com/iralab
 Now, copy config and launch files for SLAM and navigation inside turtlebot3 packages for simplicity.
 The following commands assumes ROS folder is: `/opt/ros/noetic/share/`
 
-Inside the repository:
+Inside the repository, run:
 
 ```
 sudo cp -p ros_pkgs/poincloud_to_laserscan/launch/  /opt/ros/noetic/share/poincloud_to_laserscan/launch/ 
